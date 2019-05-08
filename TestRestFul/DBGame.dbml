@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GAMEDOANSO" Class="DBGameDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-4E8JQT4;Initial Catalog=GAMEDOANSO;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="GAMEDOANSOConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="IDUser" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MK" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DAPAN" Member="DAPANs">
+    <Type Name="DAPAN">
+      <Column Name="IDCH" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DapAn" Member="DapAn1" Type="System.Char" DbType="NChar(1)" CanBeNull="true" />
+      <Association Name="CAUHOI_DAPAN" Member="CAUHOI" ThisKey="IDCH" OtherKey="IDCH" Type="CAUHOI" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DIEM" Member="DIEMs">
+    <Type Name="DIEM">
+      <Column Name="IDUser" Type="System.String" DbType="NChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DIEM" Member="DIEM1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IDLoai" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="User_DIEM" Member="User" ThisKey="IDUser" OtherKey="IDUser" Type="User" IsForeignKey="true" />
+      <Association Name="LOAICH_DIEM" Member="LOAICH" ThisKey="IDLoai" OtherKey="IDLoai" Type="LOAICH" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOAICH" Member="LOAICHes">
+    <Type Name="LOAICH">
+      <Column Name="IDLoai" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenLoai" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CAUHOI" Member="CAUHOIs">
+    <Type Name="CAUHOI">
+      <Column Name="IDCH" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CauA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CauB" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CauC" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CauD" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="IDLoai" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="LOAICH_CAUHOI" Member="LOAICH" ThisKey="IDLoai" OtherKey="IDLoai" Type="LOAICH" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

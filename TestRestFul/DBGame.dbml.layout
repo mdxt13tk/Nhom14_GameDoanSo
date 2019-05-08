@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBGame">
+  <DataContextMoniker Name="/DBGameDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f0008a25-bf01-4464-8b49-f89a7027e54c" absoluteBounds="0.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DBGameDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50d51bd0-8c80-4af6-bf51-9cd96902fd8b" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8148a8c6-1776-49ed-aa56-e9573e74442e" absoluteBounds="0.625, 2.875, 2.75, 1.1939925130208344">
+      <DataClassMoniker Name="/DBGameDataContext/DAPAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4446d97e-44ee-451a-93f5-b718b876a63c" absoluteBounds="0.64, 3.335, 2.7199999999999998, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56ce259f-97e3-43c5-bb2b-81a8932ef07e" absoluteBounds="3, 0.5, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/DBGameDataContext/DIEM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4bcdfd1-1bcf-4114-a451-02de6912fa7e" absoluteBounds="3.015, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="16a582a5-5dda-46ff-ab59-25af39e118ce" absoluteBounds="5.375, 0.5, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DBGameDataContext/LOAICH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="78a03dc3-62e8-45ae-be80-c1754c6a2e7a" absoluteBounds="5.39, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.19314697265625); (3 : 1.19314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBGameDataContext/User/User_DIEM" />
+      <nodes>
+        <classShapeMoniker Id="f0008a25-bf01-4464-8b49-f89a7027e54c" />
+        <classShapeMoniker Id="56ce259f-97e3-43c5-bb2b-81a8932ef07e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.375 : 1.09699625651042); (5 : 1.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBGameDataContext/LOAICH/LOAICH_DIEM" />
+      <nodes>
+        <classShapeMoniker Id="16a582a5-5dda-46ff-ab59-25af39e118ce" />
+        <classShapeMoniker Id="56ce259f-97e3-43c5-bb2b-81a8932ef07e" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="13d2b0f9-8d04-4808-9a01-c9957dbcc1f5" absoluteBounds="4.375, 2.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBGameDataContext/CAUHOI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b56d8b3-962f-4143-9327-cd629d492820" absoluteBounds="4.39, 3.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.375 : 3.47199625651042); (3.375 : 3.47199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DBGameDataContext/CAUHOI/CAUHOI_DAPAN" />
+      <nodes>
+        <classShapeMoniker Id="13d2b0f9-8d04-4808-9a01-c9957dbcc1f5" />
+        <classShapeMoniker Id="8148a8c6-1776-49ed-aa56-e9573e74442e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.875 : 1.69399251302083); (5.875 : 2.875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DBGameDataContext/LOAICH/LOAICH_CAUHOI" />
+      <nodes>
+        <classShapeMoniker Id="16a582a5-5dda-46ff-ab59-25af39e118ce" />
+        <classShapeMoniker Id="13d2b0f9-8d04-4808-9a01-c9957dbcc1f5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
