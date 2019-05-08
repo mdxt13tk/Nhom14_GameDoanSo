@@ -79,7 +79,6 @@
             this.txtIDUser.Name = "txtIDUser";
             this.txtIDUser.Size = new System.Drawing.Size(226, 34);
             this.txtIDUser.TabIndex = 3;
-            this.txtIDUser.Text = "13";
             // 
             // txtPassword
             // 
@@ -89,7 +88,6 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(226, 34);
             this.txtPassword.TabIndex = 4;
-            this.txtPassword.Text = "123";
             // 
             // btnDangNhap
             // 
