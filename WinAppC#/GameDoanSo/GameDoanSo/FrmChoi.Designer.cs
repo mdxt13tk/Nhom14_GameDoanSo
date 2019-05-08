@@ -42,6 +42,7 @@
             this.lblHighScore = new System.Windows.Forms.Label();
             this.lblDiem = new System.Windows.Forms.Label();
             this.btnQuiz = new System.Windows.Forms.Button();
+            this.btnQuitGame = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,6 +130,7 @@
             // groupBox1
             // 
             this.groupBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("groupBox1.BackgroundImage")));
+            this.groupBox1.Controls.Add(this.btnQuitGame);
             this.groupBox1.Controls.Add(this.lblHighScore);
             this.groupBox1.Controls.Add(this.lblDiem);
             this.groupBox1.Controls.Add(this.btnQuiz);
@@ -181,6 +183,18 @@
             this.btnQuiz.UseVisualStyleBackColor = false;
             this.btnQuiz.Click += new System.EventHandler(this.btnQuiz_Click);
             // 
+            // btnQuitGame
+            // 
+            this.btnQuitGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnQuitGame.Font = new System.Drawing.Font("Segoe Print", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitGame.Location = new System.Drawing.Point(16, 444);
+            this.btnQuitGame.Name = "btnQuitGame";
+            this.btnQuitGame.Size = new System.Drawing.Size(118, 36);
+            this.btnQuitGame.TabIndex = 10;
+            this.btnQuitGame.Text = "Quit";
+            this.btnQuitGame.UseVisualStyleBackColor = false;
+            this.btnQuitGame.Click += new System.EventHandler(this.btnQuitGame_Click);
+            // 
             // FrmChoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -214,5 +228,6 @@
         private System.Windows.Forms.Button btnQuiz;
         private System.Windows.Forms.Label lblDiem;
         private System.Windows.Forms.Label lblHighScore;
+        private System.Windows.Forms.Button btnQuitGame;
     }
 }

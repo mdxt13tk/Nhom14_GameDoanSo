@@ -247,5 +247,12 @@ namespace GameDoanSo
             Program.frStart.Visible = true;
             Program.frStart.Refresh();
         }
+
+        private void btnQuitGame_Click(object sender, EventArgs e)
+        {
+            gameOver();
+            Program.frDN.Visible = true;
+            Program.frDN.Refresh();
+        }
     }
 }
