@@ -1,6 +1,6 @@
 # Nhom14_GameDoanSo
 Đề tài môn phát triển phần mềm hướng dịch vụ.
-Các tính năng: 
+Các tính năng:
 -Đăng ký tài khoản mới
 -Đăng nhập
 -Hiển thị, cho phép chỉnh sửa thông tin người chơi
