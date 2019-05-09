@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="400dp">
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:text="Chúc mừng bạn đã chiến thắng 10/10"
+      android:gravity="center"
+      android:textSize="20sp"
+      android:textColor="#ff00"
+      android:textStyle="bold"/>
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="0.7"
+      android:text="100 điểm"
+      android:gravity="center"
+      android:textSize="25sp"
+      android:textColor="#ff00"
+      android:textStyle="bold"/>
+  <VideoView
+      android:id="@+id/videoviewWin1010"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="3"
+      android:layout_margin="10dp"/>
+  <LinearLayout
+      android:paddingStart="5dp"
+      android:paddingEnd="5dp"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="0.9">
+    <Button
+        android:id="@+id/buttonBackWin1010"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Quay về"/>
+    <Button
+        android:id="@+id/buttonExitWin1010"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Thoát Game"/>
+  </LinearLayout>
+</LinearLayout>
