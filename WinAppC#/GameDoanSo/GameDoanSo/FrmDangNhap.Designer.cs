@@ -79,7 +79,6 @@
             this.txtIDUser.Name = "txtIDUser";
             this.txtIDUser.Size = new System.Drawing.Size(226, 34);
             this.txtIDUser.TabIndex = 3;
-            this.txtIDUser.Text = "13";
             // 
             // txtPassword
             // 
@@ -89,7 +88,6 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(226, 34);
             this.txtPassword.TabIndex = 4;
-            this.txtPassword.Text = "123";
             // 
             // btnDangNhap
             // 
@@ -115,6 +113,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Font = new System.Drawing.Font("Segoe Print", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(400, 281);
             this.btnExit.Name = "btnExit";
@@ -145,9 +144,11 @@
             // 
             // FrmDangNhap
             // 
+            this.AcceptButton = this.btnDangNhap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(580, 511);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

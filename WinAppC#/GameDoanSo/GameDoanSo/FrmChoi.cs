@@ -243,9 +243,18 @@ namespace GameDoanSo
 
         private void FrmChoi_FormClosing(object sender, FormClosingEventArgs e)
         {
+            timer1.Stop();
             gameOver();
             Program.frStart.Visible = true;
             Program.frStart.Refresh();
+        }
+
+        private void btnQuitGame_Click(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            gameOver();
+            Program.frDN.Visible = true;
+            Program.frDN.Refresh();
         }
     }
 }
