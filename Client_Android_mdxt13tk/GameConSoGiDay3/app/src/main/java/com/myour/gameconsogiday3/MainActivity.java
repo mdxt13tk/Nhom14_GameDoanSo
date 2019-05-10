@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+
         //hide status bar and navigation bar
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
@@ -65,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
                 } else if(result.equals("PassError")){
                     Toast.makeText(MainActivity.this, "Thất bại!", Toast.LENGTH_SHORT).show();
                     tvNotify.setText("Sai mật khẩu, vui lòng nhập lại mật khẩu!");
+                    edtPw.requestFocus();
+                } else if(result.equals("Login")){
+                    Toast.makeText(MainActivity.this, "Thất bại!", Toast.LENGTH_SHORT).show();
+                    tvNotify.setText("Tài khoản này đang đăng nhập!");
                     edtPw.requestFocus();
                 } else {
                     Toast.makeText(MainActivity.this, "Thành công!", Toast.LENGTH_SHORT).show();

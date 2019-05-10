@@ -128,7 +128,7 @@ public class StartActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(StartActivity.this, "Lỗi:\n" + error, Toast.LENGTH_SHORT).show();
+                Toast.makeText(StartActivity.this, "Lỗi Highscore:\n" + error, Toast.LENGTH_SHORT).show();
             }
         }) {
             public Map<String, String> getParams() {
@@ -223,7 +223,7 @@ public class StartActivity extends AppCompatActivity {
                     edtRePw.setVisibility(View.INVISIBLE);
                     btnEdit.setText("Sửa");
                     edit = false;
-                    tvName.setText(Program.user.getHoTen());
+                    tvName.setText("Xin chào bạn: "+Program.user.getHoTen());
                     dialog.dismiss();
                 } else {
                     Toast.makeText(StartActivity.this, "Xảy ra lỗi!", Toast.LENGTH_SHORT).show();
@@ -300,6 +300,9 @@ public class StartActivity extends AppCompatActivity {
         super.onStart();
         if(Program.sccore!=-1 && Program.level!=-1){
             tvHighScore.setText("Kỷ lục: "+Program.sccore+" - "+levelList.get(Program.level-1));
+            highscore=Program.sccore+"";
+            Program.sccore=-1;
         }
     }
+
 }

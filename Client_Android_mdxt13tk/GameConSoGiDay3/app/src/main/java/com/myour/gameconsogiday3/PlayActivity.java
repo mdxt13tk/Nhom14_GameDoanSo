@@ -395,8 +395,26 @@ public class PlayActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause() {
+        super.onPause();
+        mediaPlayer.stop();
+        countDownTimer.cancel();
+        finish();
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
         mediaPlayer.stop();
+        countDownTimer.cancel();
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        mediaPlayer.stop();
+        countDownTimer.cancel();
+        finish();
     }
 }

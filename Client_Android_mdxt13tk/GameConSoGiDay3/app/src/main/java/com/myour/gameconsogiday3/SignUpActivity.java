@@ -66,7 +66,7 @@ public class SignUpActivity extends AppCompatActivity {
             Toast.makeText(this, "Thất bại!", Toast.LENGTH_SHORT).show();
             tvNotify.setText("Không được để trống!");
             edtName.requestFocus();
-        } else if(name.equals("IdError") || name.equals("PassError")){
+        } else if(name.equals("IdError") || name.equals("PassError") || name.equals("Login")){
             Toast.makeText(this, "Thất bại", Toast.LENGTH_SHORT).show();
             tvNotify.setText("Tên không hợp lệ!");
             edtName.requestFocus();

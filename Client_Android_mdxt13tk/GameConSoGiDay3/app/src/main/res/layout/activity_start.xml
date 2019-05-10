@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".StartActivity">
+    tools:context=".StartActivity"
+    android:background="@drawable/background2">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +60,8 @@
         android:text="Xin chào: "
         android:gravity="center"
         android:textSize="22sp"
-        android:textColor="#ff00"/>
+        android:textColor="#ff00"
+        android:textStyle="bold"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -67,7 +69,8 @@
         android:text="Bạn đã sẵn sàng!"
         android:textSize="20sp"
         android:gravity="center"
-        android:textColor="#000"/>
+        android:textColor="#000"
+        android:textStyle="bold"/>
     <Button
         android:id="@+id/buttonPlay"
         android:layout_width="wrap_content"
