@@ -299,10 +299,17 @@ public class StartActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if(Program.sccore!=-1 && Program.level!=-1){
-            tvHighScore.setText("Kỷ lục: "+Program.sccore+" - "+levelList.get(Program.level-1));
-            highscore=Program.sccore+"";
+            highscore= String.valueOf(Program.sccore);
+            tvHighScore.setText("Kỷ lục: "+highscore+" - "+levelList.get(Program.level-1));
             Program.sccore=-1;
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        String url = Program.url + "/user/logout";
+        String id = Program.user.getIDUser();
+        sendRequestSignOut(url,id);
+    }
 }
